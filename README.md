@@ -1,6 +1,6 @@
-# Django Boilerplate
+# Tec Events
 
-Simple Django boilerplate from William Vincent's [Django for Professionals](https://djangoforprofessionals.com/). 
+A one-stop hub for all events, talks, and workshops at Tec University
 
 Includes:
 - Docker 
@@ -19,12 +19,12 @@ Includes:
 ### Initial
 First, clone repo
 ```bash
-$ git clone https://github.com/dhinogz/django-boilerplate.git
+$ git clone https://github.com/dhinogz/tec_events.git
 ```
 
-Change name and change directory
+Change directory
 ```bash
-$ mv django-boilerplate project_name && cd project_name
+$ cd tec_events
 ```
 ### Environment variables
 We're gonna want to create a .env.dev file to store our environment variables
@@ -60,9 +60,8 @@ $ docker-compose up -d --build
 Visit page at http://127.0.0.1:8000/
 Access admin site at http://127.0.0.1:8000/admin 
 
-After first install, make migrations and migrate
+After first install, migrate
 ```bash
-$ docker-compose exec web python manage.py makemigrations accounts
 $ docker-compose exec web python manage.py migrate
 ```
 
