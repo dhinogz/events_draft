@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}{{ event.title }}{% endblock title %}
+
+{% block content %}
+    <div class="event-detail">
+        <h2>
+            <a href="">{{ event.title }}</a>
+        </h2>
+        <p>
+            Author: {{ event.author }}
+        </p>
+    </div>
+    <div class="back">
+        <p>
+            <a href="{% url 'event_list' %}">Back</a>
+        </p>
+    </div>
+{% endblock content %}
