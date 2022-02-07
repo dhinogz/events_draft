@@ -5,9 +5,23 @@
 
 {% block content %}
     <h1>Event List</h1>
-    {% for event in event_list %}
-    <div>
-        <h2><a href="{{ event.get_absolute_url }}">{{ event.title }}</a></h2>
+    <div class="card-deck">
+        {% for event in event_list %}
+        <div class="card" style='width: 18rem;'>
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{ event.name }} 
+                </h5>
+                <div class="card-subtitle">
+                    By: {{event.author }}
+                </div>
+                <p class="card-text">
+                    {{event.summary}}
+                </p>
+                <a href="{{ event.get_absolute_url }}" class="btn btn-primary">Go</a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
+    
 {% endblock content %}

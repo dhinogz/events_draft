@@ -25,5 +25,5 @@ urlpatterns = [
 
     # Local apps
     path('', include('pages.urls')),
-    path('events/', include('events.urls')),
+    path('event/', include('events.urls')),
 ]
